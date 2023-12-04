@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+.App {
+ background-color: #DDE6ED;
+}
+
+*, 
+::after
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  opacity: 1;
+  overflow-y:scroll;
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.275rem;
+  color: var(--bs-emphasis-color)
+}
+
+hr {
+  border: none;
+  border-top: 2px dotted rgb(0,0,0);
+  color: #fff;
+  background-color: #fff;
+  width: 100%;
+}
+
+/* layout dashboard */
+.wrapper {
+  align-items: stretch;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+#sidebar {
+  position: fixed;
+  width: 250px;
+  background: #27374D;
+  transition: all 0.35s ease-in-out;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  padding-top: 60px;
+  padding-left: 250px;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  transition: all 0.35s ease-in-out;
+  width: 100%;
+}
+
+/* sidebar element */
+.sidebar-logo{
+  padding: 1.15rem;
+}
+
+.sidebar-logo a{
+  color: white;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.sidebar-nav {
+  flex-grow: 1;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.sidebar-header{
+  color: white;
+  font-size: .75rem;
+  padding: 1.5rem 1.5rem .375rem;
+}
+
+a.sidebar-link {
+  padding: .625rem 1.625rem;
+  color: white;
+  position: relative;
+  display: block;
+  font-size: 0.875rem;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #526D82;
+}
+
+@media (max-width:768px){
+  #sidebar {
+    position: fixed;
+    width: 70px;
+    background: #27374D;
+    transition: all 0.35s ease-in-out;
+    overflow-y: auto;
+    height: 100%;
+  }
+  
+  .main{
+    display: flex;
+  flex: 1;
+  padding-top: 60px;
+  padding-left: 70px;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  transition: all 0.35s ease-in-out;
+  width: 100%;
+  }
+}
+
+.card {
+  box-shadow: 0 0 .875rem 0 rgba(34,46,60, .05);
+  margin-bottom: 24px;
+}
+
+.illustration {
+  background-color: var(--bs-primary-bg-subtle);
+  color: var(--bs-emphasis-color)
+}
+
+.bg-gray{
+ background-color: #DDE6ED
+}
+
+.gray{
+  color: #526D82
+}
+
+.button-blue {
+  background: #526D82;
+  color:white;
+  padding: 7px 30px;
+  cursor:pointer;
+  border-radius: 15px;
+  outline: none;
+  border:none
+}
+
+.nav-pills li a:hover {
+  background-color: #1fc28b;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .card,
+  .footer {
+    border-color: #222;
+  }
+  .code {
+    background: #111;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+}
